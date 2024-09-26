@@ -2,14 +2,14 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "5.66.0"
+      version = "~>5.0"
     }
   }
 
 
  backend "s3" {
     bucket = "prameela-rootstate"
-    key    = "vpc-lock"
+    key    = "aws-vpc-lock"
     region = "us-east-1"
     dynamodb_table = "prameela-lock"
   }
